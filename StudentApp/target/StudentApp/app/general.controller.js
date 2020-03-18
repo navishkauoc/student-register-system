@@ -31,7 +31,7 @@ function GeneralController($scope, Student) {
 	}
 	
 	$scope.deleteStudent = function(student){
-		student.$delete({id:student.id},function(){
+		student.delete({id:student.id},function(){
 			$scope.students=Students.query();
 		});
 	}

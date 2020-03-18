@@ -32,7 +32,7 @@ function GeneralController($scope, Student) {
 	
 	$scope.deleteStudent = function(student){
 		student.$delete({id:student.id},function(){
-			$scope.students=Students.query();
+			$scope.students=Student.query();
 		});
 	}
 	

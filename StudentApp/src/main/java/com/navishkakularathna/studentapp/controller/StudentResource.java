@@ -55,7 +55,7 @@ public class StudentResource {
 		}
 	}
 	
-	@RequestMapping(value = "api/student/(id)", method=RequestMethod.DELETE,produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "student/{id}", method=RequestMethod.DELETE,produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Void> deleteStudent(@PathVariable Integer id){
 		studentService.delete(id);
 		return ResponseEntity.ok().build();
