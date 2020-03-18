@@ -28,9 +28,9 @@ public class StudentService {
 	}
 	
 	public Student update(Student student) {
-		if(student.getId() != null && studentRepository.exists(student.getId())) {
-			throw new EntityExistsException("ID already exists in the db");
-		}
+		//if(student.getId() != null && studentRepository.exists(student.getId())) {
+			//throw new EntityExistsException("ID already exists in the db");
+		//}
 		return studentRepository.save(student);
 	}
 	

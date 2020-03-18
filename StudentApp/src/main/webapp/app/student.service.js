@@ -1,12 +1,13 @@
 angular.module('crudApp').factory('Student',Student);
 
-Student.$inject=['$resource'];
+Student.$inject = [ '$resource' ];
 
-function Student($resource){
+function Student($resource) {
 	var resourceUrl = 'api/student/:id';
-	return $resource(resourceUrl,{},{
-		'update':{
-			method:'PUT'
+	
+	return $resource(resourceUrl, {}, {
+		'update' : {
+			method : 'PUT'
 		}
 	});
 }

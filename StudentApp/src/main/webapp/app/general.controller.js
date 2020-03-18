@@ -1,21 +1,24 @@
-angular.module("crudApp").controller("GeneralController",GeneralController);
+angular.module("crudApp").controller("GeneralController", GeneralController);
 
-GeneralController.inject=['$scope','Student'];
+GeneralController.inject = [ '$scope', 'Student' ];
 
-function GeneralController($scope,Student){
+function GeneralController($scope, Student) {
+	
 	$scope.students = Student.query();
+	
 	$scope.student = {};
+	
 	$scope.buttonText = "Submit";
 	
-	$scope.saveStudent = function(){
-		if($scope.student.id != undefined){
-			Student.update($scope,student,function(){
+	$scope.saveStudent = function() {
+		if($scope.student.id !== undefined) {
+			Student.update($scope.student, function() {
 				$scope.students = Student.query();
 				$scope.student = {};
 				$scope.buttonText = "Submit";
 			});
-		} else{
-			Student.save($scope,student,function(){
+		} else {
+			Student.save($scope.student, function() {
 				$scope.students = Student.query();
 				$scope.student = {};
 			});

@@ -1,0 +1,5 @@
+com\navishkakularathna\studentapp\CrudApp.class
+com\navishkakularathna\studentapp\repository\StudentRepository.class
+com\navishkakularathna\studentapp\model\Student.class
+com\navishkakularathna\studentapp\controller\StudentResource.class
+com\navishkakularathna\studentapp\service\StudentService.class
